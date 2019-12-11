@@ -7,18 +7,14 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon src/server.js",
-    "dev:debug": "nodemon --inspect src/server.js",
-    "pretest": "cross-env NODE_ENV=test sequelize db:migrate",
-    "test": "cross-env NODE_ENV=test jest",
-    "posttest": "cross-env NODE_ENV=test sequelize db:migrate:undo:all"
+    "dev:debug": "nodemon --inspect src/server.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "pg": "^7.14.0",
-    "sequelize": "^5.21.2",
+    "mongoose": "^5.8.0",
     "youch": "^2.0.10"
   },
   "devDependencies": {
