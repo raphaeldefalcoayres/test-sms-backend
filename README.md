@@ -1,5 +1,5 @@
-# api-nodejs-example
-basic example api nodejs with a begin configurations.
+# test-sms-backend
+Node js API using express js to manage SMS messages
 
 ## Getting Started
 
