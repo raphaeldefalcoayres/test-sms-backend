@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-stable current version of node, npm, yarn and database postgresql
+stable current version of node, npm, yarn and database mongodb
 ```
 
 ### Installing
@@ -52,7 +52,7 @@ Execute `yarn test` for testing api
 * [Prettier](https://prettier.io/) - Prettier is an opinionated code formatter.
 * [Nodemon](https://nodemon.io/) -  Nodemon for reload automatically.
 * [EditorConfig](https://editorconfig.org/) - EditorConfig helps maintain consistent coding styles for multiple developers and editors.
-* [Sequelize](https://sequelize.org/) - Sequelize is a promise-based Node.js ORM.
+* [Moongoose](https://mongoosejs.com/) - elegant mongodb object modeling for node.js
 * [Jest](https://jestjs.io/) - Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
 * [Supertest](http://visionmedia.github.io/superagent/) - Super-agent driven library for testing node.js HTTP servers using a fluent API.
 * [Factory Girl](https://github.com/simonexmachina/factory-girl#readme) - A factory library for node.js and the browser inspired by factory_girl.
