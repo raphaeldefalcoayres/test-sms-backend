@@ -1,13 +1,15 @@
 import { Router } from 'express';
 
-import UserController from './app/controllers/UserConroller';
-
 const routes = new Router();
 
 routes.get('/', (req, res) => {
   return res.json({ api: 'ok' });
 });
 
-routes.post('/users', UserController.store);
+routes.post('/message-to-numbers', (req, res) => {
+  const { message } = req.body;
+
+  return res.json({ api: 'ok' });
+});
 
 export default routes;
