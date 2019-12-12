@@ -1,18 +1,17 @@
-import SmsNumberConvertController from '../src/app/controllers/SmsNumberConvertController';
+import { convertNumbersToMessage } from '../src/lib/converters';
+import { number, message } from './util/standard_data';
 
-describe('SMS - Number', () => {
-  it('should convert numbers in message', async () => {
-    const string = '833777783303_33063377772';
+describe('Unitary tests', () => {
+  describe('SMS - Number', () => {
+    it('should convert numbers in message', async () => {
+      const numbers = convertNumbersToMessage(number);
 
-    const numbers = SmsNumberConvertController.convertNumbersToMessage(string);
+      expect(numbers).toEqual(message);
+    });
+    it('should not convert message in message', async () => {
+      const numbers = convertNumbersToMessage(message);
 
-    expect(numbers).toEqual('TESTE DE MESA');
-  });
-  it('should not convert message in message', async () => {
-    const string = 'TESTE DE MESA';
-
-    const numbers = SmsNumberConvertController.convertNumbersToMessage(string);
-
-    expect(numbers).toEqual(false);
+      expect(numbers).toEqual(false);
+    });
   });
 });
