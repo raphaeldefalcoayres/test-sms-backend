@@ -1,10 +1,12 @@
-import { object, shape, string, required } from 'yup';
+import { object, string } from 'yup';
 import { convertMessageToNumbers } from '../../lib/converters';
 
 class SmsMessageConvertController {
   async store(req, res) {
     const schema = object().shape({
-      message: string().required(),
+      message: string()
+        .max(255)
+        .required(),
     });
 
     if (!(await schema.isValid(req.body))) {

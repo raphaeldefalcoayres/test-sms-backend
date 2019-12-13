@@ -1,4 +1,4 @@
-import { object, shape, string, required } from 'yup';
+import { object, string } from 'yup';
 import { convertNumbersToMessage } from '../../lib/converters';
 
 class SmsNumberConvertController {
