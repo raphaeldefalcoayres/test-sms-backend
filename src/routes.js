@@ -1,7 +1,7 @@
 import { Router } from 'express';
 
-import SmsMessageConvertController from './app/controllers/SmsMessageConvertController';
-import SmsNumberConvertController from './app/controllers/SmsNumberConvertController';
+import MessageController from './app/controllers/MessageController';
+import NumberController from './app/controllers/NumberController';
 
 const routes = new Router();
 
@@ -9,7 +9,7 @@ routes.get('/', (req, res) => {
   return res.json({ api: 'ok' });
 });
 
-routes.post('/sms/message-convert', SmsMessageConvertController.store);
-routes.post('/sms/number-convert', SmsNumberConvertController.store);
+routes.post('/messages/convert/sms', MessageController.store);
+routes.post('/numbers/convert/sms', NumberController.store);
 
 export default routes;

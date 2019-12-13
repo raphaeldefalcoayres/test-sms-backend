@@ -1,9 +1,11 @@
 import 'dotenv/config';
 import './bootstrap';
+import swaggerUi from 'swagger-ui-express';
 
 import express from 'express';
 import cors from 'cors';
 import Youch from 'youch';
+import swaggerConfig from './config/swagger';
 import routes from './routes';
 
 import './database';
@@ -19,6 +21,7 @@ class App {
   middlewares() {
     this.server.use(express.json());
     this.server.use(cors());
+    this.server.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerConfig));
   }
 
   routes() {

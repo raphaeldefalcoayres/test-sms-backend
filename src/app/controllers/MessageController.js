@@ -2,7 +2,7 @@ import { object, string } from 'yup';
 import { convertMessageToNumbers } from '../../lib/converters';
 import Message from '../schemas/Message';
 
-class SmsMessageConvertController {
+class MessageController {
   async store(req, res) {
     const schema = object().shape({
       message: string()
@@ -28,4 +28,4 @@ class SmsMessageConvertController {
   }
 }
 
-export default new SmsMessageConvertController();
+export default new MessageController();

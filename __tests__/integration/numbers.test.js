@@ -7,7 +7,7 @@ describe('Integration tests', () => {
   describe('SMS - numbers', () => {
     it('should store numbers converted in message', async () => {
       const response = await request(app)
-        .post('/sms/number-convert')
+        .post('/numbers/convert/sms')
         .send({ number });
       expect(response.status).toBe(200);
       expect(response.body).toHaveProperty('message');
@@ -17,7 +17,7 @@ describe('Integration tests', () => {
   describe('SMS - numbers', () => {
     it('should store text not converted in message', async () => {
       const response = await request(app)
-        .post('/sms/number-convert')
+        .post('/numbers/convert/sms')
         .send({ message });
       expect(response.status).toBe(400);
     });
