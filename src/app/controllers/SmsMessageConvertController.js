@@ -19,7 +19,7 @@ class SmsMessageConvertController {
     const numbers = convertMessageToNumbers(message);
 
     await Message.create({
-      user: req.connection.remoteAddress,
+      user: req.ip,
       content: message,
       numbers,
     });
