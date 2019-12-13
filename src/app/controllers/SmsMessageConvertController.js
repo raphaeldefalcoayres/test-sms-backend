@@ -1,5 +1,6 @@
 import { object, string } from 'yup';
 import { convertMessageToNumbers } from '../../lib/converters';
+import Message from '../schemas/Message';
 
 class SmsMessageConvertController {
   async store(req, res) {
@@ -16,6 +17,12 @@ class SmsMessageConvertController {
     const { message } = req.body;
 
     const numbers = convertMessageToNumbers(message);
+
+    await Message.create({
+      user: req.connection.remoteAddress,
+      content: message,
+      numbers,
+    });
 
     return res.json({ numbers });
   }
