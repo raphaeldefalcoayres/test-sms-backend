@@ -9,7 +9,9 @@ routes.get('/', (req, res) => {
   return res.json({ api: 'ok' });
 });
 
+routes.get('/messages', MessageController.index);
 routes.post('/messages/convert/sms', MessageController.store);
+routes.get('/numbers', NumberController.index);
 routes.post('/numbers/convert/sms', NumberController.store);
 
 export default routes;

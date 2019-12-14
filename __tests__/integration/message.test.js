@@ -5,6 +5,12 @@ import { number, message } from '../util/standard_data';
 
 describe('Integration tests', () => {
   describe('SMS - Message', () => {
+    it('should list messages', async () => {
+      const response = await request(app).get('/messages');
+      expect(response.status).toBe(200);
+      expect(response.body).toEqual(expect.arrayContaining([]));
+    });
+
     it('should store message converted in numbers', async () => {
       const response = await request(app)
         .post('/messages/convert/sms')

@@ -3,6 +3,11 @@ import { convertMessageToNumbers } from '../../lib/converters';
 import Message from '../schemas/Message';
 
 class MessageController {
+  async index(req, res) {
+    const messages = await Message.find().sort({ createdAt: 'desc' });
+    return res.json(messages);
+  }
+
   async store(req, res) {
     const schema = object().shape({
       message: string()
