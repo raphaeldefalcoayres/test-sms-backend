@@ -15,6 +15,20 @@ CRUDE
 
 /**
  * @swagger
+ * /messages:
+ *  get:
+ *    tags: [Message]
+ *    description: Route of list messages
+ *
+ *    responses:
+ *      '200':
+ *       description: Return messages
+ *      '500':
+ *       description: Server error
+ */
+
+/**
+ * @swagger
  * /messages/convert/sms:
  *  post:
  *    tags: [Message]
@@ -32,6 +46,20 @@ CRUDE
  *       description: return numbers of SMS message
  *      '400':
  *       description: Bad request of validation error
+ */
+
+/**
+ * @swagger
+ * /numbers:
+ *  get:
+ *    tags: [Numbers]
+ *    description: Route of list numbers
+ *
+ *    responses:
+ *      '200':
+ *       description: Return numbers
+ *      '500':
+ *       description: Server error
  */
 
 /**
