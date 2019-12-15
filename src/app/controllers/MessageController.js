@@ -23,8 +23,10 @@ class MessageController {
 
     const numbers = convertMessageToNumbers(message);
 
+    const ip = req.headers['X-Forwarded-For'] || req.connection.remoteAddress;
+
     const { user, content, createdAt } = await Message.create({
-      user: req.ip,
+      user: ip,
       content: message,
       numbers,
     });
