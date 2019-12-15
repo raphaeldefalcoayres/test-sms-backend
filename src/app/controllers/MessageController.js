@@ -23,13 +23,13 @@ class MessageController {
 
     const numbers = convertMessageToNumbers(message);
 
-    await Message.create({
+    const { user, content, createdAt } = await Message.create({
       user: req.ip,
       content: message,
       numbers,
     });
 
-    return res.json({ numbers });
+    return res.json({ user, content, numbers, createdAt });
   }
 }
 

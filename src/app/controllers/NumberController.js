@@ -21,13 +21,13 @@ class NumberController {
 
     const message = convertNumbersToMessage(number);
 
-    await Number.create({
+    const { user, content, createdAt } = await Number.create({
       user: req.ip,
       content: number,
       message,
     });
 
-    return res.json({ message });
+    return res.json({ user, content, message, createdAt });
   }
 }
 
