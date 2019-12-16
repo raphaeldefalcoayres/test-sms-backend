@@ -38,7 +38,7 @@ Rules for sending SMS from phones that do not have a QUERTY keyboard:
 
 ## Overview
 
-This API was developed in nodejs using the expressjs framework, configured with MongoDB for using noSQL database, Sucrase for use of import and export, Eslint for code linting, prettier for automatic code standardization, EditorConfig for standardization across various editors and IDEs, Nodemon for automatic reload during development, Jest with Sqlite database for tests, swagger for documentation and other libraries.
+This API was developed in nodejs using the expressjs framework, configured with Mongoose for using MongoDB a noSQL database, Sucrase for use of import and export, Eslint for code linting, prettier for automatic code standardization, EditorConfig for standardization across various editors and IDEs, Nodemon for automatic reload during development, Jest with Sqlite database for tests, swagger for documentation and other libraries.
 
 ## Getting Started
 
