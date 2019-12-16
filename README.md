@@ -2,7 +2,7 @@
 Node js API using express js to manage SMS messages
 
 
->URL API deploy in Heroku: https://test-sms-backend.herokuapp.com/
+>URL API deployed in Heroku: https://test-sms-backend.herokuapp.com/
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/raphaeldefalcoayres/test-sms-backend/blob/master/LICENSE)
 
